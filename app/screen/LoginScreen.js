@@ -12,8 +12,9 @@ const LoginScreen = ({navigation}) => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = () => {
-    navigation.replace("app")
+  const onSubmit = (data) => {
+   // navigation.replace("app")
+   console.log(JSON.stringify(data.email))
   };
 
   return (
@@ -52,10 +53,10 @@ const LoginScreen = ({navigation}) => {
           control={control}
           name="email"
           rules={{
-            required: 'Email is required',
+            required: 'yêu cầu nhập email',
             pattern: {
               value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-              message: 'Enter a valid email address',
+              message: 'sai email',
             },
           }}
           hasError={errors.email?.message}
@@ -68,14 +69,14 @@ const LoginScreen = ({navigation}) => {
           name="password"
           isPassword
           rules={{
-            required: 'Password is required',
+            required: 'yêu cầu nhập Password',
             minLength: {
-              value: 8,
-              message: 'Password must be at least 8 characters long',
+              value: 5,
+              message: 'ít nhất 5 ký tự',
             },
             pattern: {
               value: /^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).*$/,
-              message: 'Password must include an uppercase letter and a special character',
+              message: 'yêu cầu có ít nhất 1 chữ hoa, 1 chữ thường',
             },
           }}
           hasError={errors.password?.message}

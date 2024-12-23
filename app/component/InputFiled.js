@@ -13,6 +13,7 @@ const InputField = ({
   isMultiple,
   hasError,
 }) => {
+  console.log(JSON.stringify(name))
   return (
     <View style={{ marginBottom: 20, marginHorizontal: 40 }}>
       <View

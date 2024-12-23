@@ -57,6 +57,9 @@ const HomeScreen = ({ navigation }) => {
           elevation: 1,
           borderRightWidth: 1,
         }}
+        onPress={()=>{
+          navigation.navigate("detail",{foot:item})
+        }}
       >
         <View style={{ width: "50%", height: "100%", backgroundColor: "blue" }}>
           <Image
@@ -107,13 +110,13 @@ const HomeScreen = ({ navigation }) => {
         data={Data}
         showsVerticalScrollIndicator={false}
         onEndReached={() => {
-          if (Data.length === data.length && !isStop.current) {
+          if (Data.length === data.length && !isStop.current) {  //
             getData("refresh");
           } else if (Data.length < data.length) {
             getData("loadmore");
           }
         }}
-        onEndReachedThreshold={0.5}
+        onEndReachedThreshold={1}
         renderItem={({ item }) => <RenderItem item={item} />}
         ListFooterComponent={() => {
           return isLoading ? (
@@ -125,7 +128,7 @@ const HomeScreen = ({ navigation }) => {
         refreshControl={
           <RefreshControl
             refreshing={refreshing}
-            onRefresh={() => getData("refresh")}
+            onRefresh={() =>  getData("refresh")}
           />
         }
       />

@@ -13,11 +13,11 @@ const RootNavigator = () => {
       <Stack.Navigator
       screenOptions={{headerShown:false}}
       >
-      {/* <Stack.Screen 
+      <Stack.Screen 
         name='login'
         component={LoginScreen}
         options={{headerShown:false}}
-        /> */}
+        />
     <Stack.Screen
     
     name='app'
