@@ -1,5 +1,6 @@
 import {View, Text, TouchableOpacity} from 'react-native';
 import React, {useEffect} from 'react';
+import { Margin } from '../../theme';
 
 const CustomButton = ({label, Icon, onPress, backgroundColor, isFlex, marginhorizontal
 , Padding
@@ -15,7 +16,7 @@ const CustomButton = ({label, Icon, onPress, backgroundColor, isFlex, marginhori
         borderRadius: 25,
         padding: Number(Padding),
         marginHorizontal: Number(marginhorizontal),
-        marginBottom: 25,
+        marginBottom: Margin.margin25,
         flexDirection: 'row',
         alignItems: 'center',
         elevation:15
@@ -27,7 +28,7 @@ const CustomButton = ({label, Icon, onPress, backgroundColor, isFlex, marginhori
             padding: 4,
             position: 'absolute',
             left: 20,
-            //borderRadius: 10,
+            borderRadius: 10,
             alignItems:'flex-end',
     
           }}>

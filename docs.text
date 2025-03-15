@@ -1,0 +1,144 @@
+useForm xử lý tất cả các funtcion trong useForm
+như validation , errors , form submit
+
+Controller bọc các trưởng 
+
+validation : required , min , max , minLength , maxLength
+pattern , validate
+
+validate :{      
+required
+
+min
+
+max
+
+minLength
+
+maxLength
+
+pattern
+
+validate
+}
+
+
+
+useForm  :{
+    mode : onChange , onBlur , onSubmit ,  onTouched| all = "onSubmit"
+    des:this option allows you to configure the  validation stategy before a user submits the form , 
+    the vaidation occurs during the onSubmit event , which is triggered by invoking the hanldesubmit funtcion
+}
+
+
+2. revalidateMode : 
+
+
+reset : 
+
+
+ {/* Button */}
+                    {/* <TouchableOpacity
+                        style={styles.button}
+                    >
+                        <Svg
+                            style={{
+                                backgroundColor: "transparent",
+                                 width: 295,
+                               // width: "100%",
+                                height: 50,
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}
+                        >
+                            <Defs>
+                                <LinearGradient
+                                    id='loginBtn'
+                                    gradientUnits="userSpaceOnUse"
+                                    x1="100%" y1="0" x2="0" y2="0"
+                                >
+                                    <Stop offset={1} stopColor="rgba(255, 159, 199, 1)" />
+                                    <Stop offset={0} stopColor="rgba(243, 40, 120, 1)" />
+                                </LinearGradient>
+                                {/* <Text
+                                    style={{
+                                        fontWeight: "700",
+                                        fontSize: 16,
+                                        color: "#FFFFFF",
+
+                                        textAlign: "center"
+                                    }}
+
+                                >Login</Text> */}
+                    {/* </Defs>
+                            {render_background()}
+
+                        </Svg>
+
+                    </TouchableOpacity> */}
+                    {/* next */}
+
+
+
+
+
+                     <View
+                    style={{
+                        position: "absolute",
+                        top: 258,
+                        //    left: 40,
+                        flexDirection: "row",
+
+                        alignItems: "center",
+                        justifyContent: "center",
+
+                        width: "100%",
+                        gap: 11,
+                    }}
+                >
+                    <View
+                        style={styles.container_box}
+                    >
+                        <TextInput
+                            style={styles.boxTxt}
+                        />
+                        <View
+                            style={styles.line}
+                        ></View>
+                    </View>
+
+
+                    <View
+                        style={styles.container_box}
+                    >
+                        <TextInput
+                            style={styles.boxTxt}
+                        />
+                        <View
+                            style={styles.line}
+                        ></View>
+                    </View>
+
+                    <View
+                        style={styles.container_box}
+                    >
+                        <TextInput
+                            style={styles.boxTxt}
+                        />
+                        <View
+                            style={styles.line}
+                        ></View>
+                    </View>
+
+                    <View
+                        style={styles.container_box}
+                    >
+                        <TextInput
+                            style={styles.boxTxt}
+                        />
+                        <View
+                            style={styles.line}
+                        ></View>
+                    </View>
+
+                </View>

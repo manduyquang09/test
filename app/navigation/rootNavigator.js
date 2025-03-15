@@ -1,33 +1,36 @@
-
-
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { LoginScreen } from '../screen';
-import AppStack from './AppStack';
-const Stack = createStackNavigator()
+import {SuccessScreen, OtpScreen, SignupScreen} from '../screen/index';
+const Stack = createStackNavigator();
+export const route = {
+  SUCCESS: 'success',
+  SIGNUP: 'signup',
+  OTP: 'otp',
+};
 const RootNavigator = () => {
-    return (
-       <NavigationContainer>
+  return (
+    <NavigationContainer>
       <Stack.Navigator
-      screenOptions={{headerShown:false}}
-      >
-      <Stack.Screen 
-        name='login'
-        component={LoginScreen}
-        options={{headerShown:false}}
+        initialRouteName={route.SIGNUP}
+        screenOptions={{headerShown: false}}>
+        <Stack.Screen
+          name={route.SIGNUP}
+          component={SignupScreen}
+          options={{headerShown: false}}
         />
-    <Stack.Screen
-    
-    name='app'
-    component={AppStack}
-    />
+        <Stack.Screen
+          name={route.OTP}
+          component={OtpScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={route.SUCCESS}
+          component={SuccessScreen}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
-       </NavigationContainer>
-    );
-}
-
-const styles = StyleSheet.create({})
-
+    </NavigationContainer>
+  );
+};
 export default RootNavigator;

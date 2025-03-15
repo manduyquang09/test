@@ -1,0 +1,24 @@
+
+export default {
+    PRIMARY: "#FF4E98",
+    BLACK: "#363D4E",
+    LIGHT_BLACK: "#4E4B66",
+    LIGHT_GREY: "#F9F9FF",
+    GREY: "#D0D3E5",
+    WHITE: "#FFFFFF",
+    LIGHT_PINK: "#FF9FC7",
+    PINK: "#F32878",
+    DARK_BLUE:"#133698", 
+    PURPLE:"#CD03FC", 
+    PURPLE_BLUE:"#522ED2", 
+    LIGHT_PURPLE:"#6C4DDA" ,
+    LIGHT_ORRANGE:"#FFBF3599", 
+    ORRANGE:"#FFA900" ,
+    LIGHT_GREEN:"#23D2C399",
+    GREEN :"#01BCAD",
+    SKY_BLUE:"#02AACF",
+    AQUA_BLUE:"#00BCE599", 
+    BLUE:"#3462FF",
+    LIGHT_BLUE:"#466FFF99"
+
+}

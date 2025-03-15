@@ -1,42 +1,30 @@
-import { createStackNavigator } from '@react-navigation/stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { DetailScreen, HomeScreen } from '../screen';
-import { Text } from '@react-navigation/elements';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {StyleSheet, View} from 'react-native';
+import {DetailScreen, HomeScreen} from '../screen';
 const Stack = createStackNavigator();
 const AppStack = () => {
-    return (
-      <Stack.Navigator
-      initialRouteName='home'
+  return (
+    <Stack.Navigator
+      initialRouteName="home"
       screenOptions={{
-    statusBarColor:"orange",
- headerStyle:{
-    backgroundColor:"orange"
- }, 
- headerTintColor:"#fff", 
- headerTitleAlign:"center",
-
-      }}
-      
-      >
-        <Stack.Screen
-        options={{headerShown:false}}
-        name='home'
+        statusBarColor: 'orange',
+        headerStyle: {
+          backgroundColor: 'orange',
+        },
+        headerTintColor: '#fff',
+        headerTitleAlign: 'center',
+      }}>
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="home"
         component={HomeScreen}
+      />
+      <Stack.Screen name="detail" component={DetailScreen} />
+    </Stack.Navigator>
+  );
+};
 
-        />
-        <Stack.Screen
-        name='detail'
-        component={DetailScreen}
-
-   
-
-        />
-      </Stack.Navigator>
-    );
-}
-
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
 
 export default AppStack;

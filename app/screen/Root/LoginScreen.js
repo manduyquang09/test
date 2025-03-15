@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
-import InputField from '../component/InputFiled';
-import CustomButton from '../component/Button';
+import InputField from '../../component/root/InputFiled';
+import CustomButton from '../../component/root/Button';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const LoginScreen = ({navigation}) => {

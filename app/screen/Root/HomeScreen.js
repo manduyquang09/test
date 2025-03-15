@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { StyleSheet, View, FlatList, Text, StatusBar, Image, Dimensions, TouchableOpacity, ActivityIndicator, RefreshControl } from 'react-native';
-import data from "../../data.json";
+import data from "../../../data.json";
 
 const HomeScreen = ({ navigation }) => {
   const limit = 5;
